@@ -8,6 +8,10 @@ export class BinaryHeap {
     }
   }
 
+  get size() {
+    return this.#content.length;
+  }
+
   push(element) {
     // Add the new element to the end of the array.
     this.#content.push(element);
@@ -48,10 +52,6 @@ export class BinaryHeap {
       this.#sinkDown(i);
       break;
     }
-  }
-
-  size() {
-    return this.#content.length;
   }
 
   #bubbleUp(n) {
